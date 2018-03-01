@@ -14,13 +14,18 @@ import javafx.stage.Stage;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.sound.midi.*;
 
+import com.synthbot.audioplugin.vst.JVstLoadException;
+import com.synthbot.audioplugin.vst.vst2.JVstHost2;
+
 
 public class Main extends Application {
 	File selectedFile;
+	File vstFile = new File("C:/VST/TAL-Elek7ro-II.dll");
 	FileChooser fileChooser;
 	Media media;
 	MediaPlayer mp;
